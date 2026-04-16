@@ -1,2 +1,5 @@
 Get-PSDrive -PSProvider FileSystem
-Get-Process
+
+Write-Host "Running process check..."
+
+Get-Process | Sort-Object CPU -Descending | Select-Object -First 5
